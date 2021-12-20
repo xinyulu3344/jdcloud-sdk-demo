@@ -9,6 +9,6 @@ import const
 
 def getDiskClient():
     credential = Credential(access_key=const.access_key, secret_key=const.secret_key)
-    config = Config(endpoint='cdn.jdcloud-api.com', scheme=SCHEME_HTTPS, timeout=10)
+    config = Config(endpoint='disk.jdcloud-api.com', scheme=SCHEME_HTTPS, timeout=10)
     client = DiskClient(credential=credential, config=config, logger=Logger(ERROR))
     return client
