@@ -4,7 +4,11 @@ from jdcloud_sdk.core.logger import Logger
 from jdcloud_sdk.core.logger import ERROR
 from jdcloud_sdk.core.const import SCHEME_HTTPS
 from jdcloud_sdk.core.config import Config
-import const
+import os
+import sys
+
+sys.path.append(os.path.abspath(os.path.dirname(os.path.dirname(__file__))))
+from const import const
 
 
 def getDiskClient():
