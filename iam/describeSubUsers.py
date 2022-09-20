@@ -6,6 +6,9 @@ def describeSubUsers():
     client = getIamClient()
     try:
         parameters = DescribeSubUsersParameters()
+        parameters.setPageNumber(1)
+        parameters.setPageSize(100)
+
         request = DescribeSubUsersRequest(parameters)
         resp = client.send(request)
         print(resp.request_id)
